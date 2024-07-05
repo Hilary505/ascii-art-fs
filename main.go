@@ -22,7 +22,7 @@ func main() {
 	// Check if there are any arguments passed
 	if len(os.Args) <= 1 {
 		fmt.Println(fsError)
-		os.Exit(1)
+		os.Exit(0)
 	}
 
 	// Default arguments
@@ -57,7 +57,7 @@ func main() {
 			subString = input
 		default:
 			fmt.Println(fsError)
-			os.Exit(1)
+			os.Exit(0)
 		}
 	} else {
 		switch nArgs {
@@ -73,13 +73,13 @@ func main() {
 			bannerFile = args[2]
 		default:
 			fmt.Println(ErrorText)
-			os.Exit(1)
+			os.Exit(0)
 		}
 	}
 
 	if strings.Contains(bannerFile, ".") {
 		fmt.Println(fsError)
-		os.Exit(1)
+		os.Exit(0)
 	}
 
 	bannerFile += ".txt"
